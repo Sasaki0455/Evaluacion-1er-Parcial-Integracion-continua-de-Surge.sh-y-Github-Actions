@@ -22,6 +22,5 @@ jobs:
         run: npm install --global surge
 
       - name: Publicar página
-        env:
-          SURGE_API_KEY: ${{ secrets.SURGE_API_KEY }}
+      
         run: surge --project ./ --domain ${{ secrets.SURGE_DOMAIN }} --token ${{ secrets.SURGE_API_KEY }}
